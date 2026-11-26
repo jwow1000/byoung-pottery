@@ -10,7 +10,10 @@ import {PRODUCT_QUERY, PRODUCT_SLUGS_QUERY} from '@/sanity/queries'
 import type {PRODUCT_QUERY_RESULT} from '@/sanity/types'
 
 export async function generateStaticParams() {
-  return cachedFetch(PRODUCT_SLUGS_QUERY)
+  const slugs = await cachedFetch(PRODUCT_SLUGS_QUERY)
+  // Cache Components fails the build if this returns an empty array, so fall
+  // back to a placeholder slug (it resolves to notFound()) when the shop is empty.
+  return slugs.length ? slugs : [{slug: '__placeholder__'}]
 }
 
 export async function generateMetadata({params}: PageProps<'/shop/[slug]'>): Promise<Metadata> {
