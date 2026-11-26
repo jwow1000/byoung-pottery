@@ -1,0 +1,17 @@
+{
+  "name": "byoung-pottery",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typegen": "pnpm --filter studio typegen"
+  },
+  "devDependencies": {
+    "turbo": "^2.11.13"
+  },
+  "packageManager": "pnpm@10.18.2",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
