@@ -12,7 +12,7 @@ export async function SiteHeader() {
       )}
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
         <Link href="/" className="font-serif text-2xl">
-          {settings?.title ?? 'B. Young Pottery'}
+          {settings?.title ?? 'BYOUNG POTTERY'} 
         </Link>
         <ul className="flex gap-6 text-sm">
           <li><Link href="/shop">Shop</Link></li>

@@ -15,7 +15,7 @@ export default async function HomePage() {
     <div className="space-y-20">
       <section className="space-y-6">
         {settings?.heroImage && (
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <div className="relative aspect-[16/7] w-full overflow-hidden">
             <Image
               src={urlFor(settings.heroImage).width(2000).height(1125).url()}
               alt={settings.heroImage.alt ?? ''}
@@ -23,10 +23,10 @@ export default async function HomePage() {
               priority
               sizes="100vw"
               className="object-cover"
-            />
+              />
           </div>
         )}
-        {settings?.tagline && <p className="font-serif text-3xl sm:text-4xl">{settings.tagline}</p>}
+        {settings?.tagline && <p className="font-serif text-xl sm:text-2xl">{settings.tagline}</p>}
       </section>
 
       {!!settings?.featuredProducts?.length && (

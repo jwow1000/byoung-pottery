@@ -9,7 +9,7 @@ const geistSans = Geist({variable: '--font-geist-sans', subsets: ['latin']})
 const fraunces = Fraunces({variable: '--font-fraunces', subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: {default: 'B. Young Pottery', template: '%s · B. Young Pottery'},
+  title: {default: 'BYoung Pottery', template: '%s · BYoung Pottery'},
   description: 'Handmade ceramics',
 }
 
